@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duck'n Roll Remeras</title>
+  <meta name="description" content="Duck'n Roll Remeras: estilo retro, gaming y más. Remeras personalizadas para espíritus rebeldes.">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts Retro -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-dark text-light">
+
+  <!-- Header con Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-warning">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo1.PNG" alt="Logo de Duck'n Roll Remeras" width="100" height="100" class="me-2">
+        <div class="d-flex flex-column">
+          <span class="logo-title text-warning">Duck'n Roll</span>
+          <span class="logo-tagline text-warning d-none d-md-block">
+            "Estilo rebelde, sin manual de instrucciones"
+          </span>   
+        </div>
+      </a>
+      
+      
+
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces del menú -->
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section id="productos" class="productos container py-5">
+        <h2 class="text-warning logo-title mb-4 text-center">Nuestros Productos</h2>
+      
+        <div class="row g-4">
+          <!-- Producto 1 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card bg-black text-light border border-warning h-100">
+              <img src="images/remera 1.png" class="card-img-top" alt="Remera Retro 1">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Remera Volver al Futuro</h5>
+                <p class="card-text">Diseño clasico para los fans de los 80s. 100% algodón.</p>
+                <button class="btn btn-warning btn-zoom" data-bs-toggle="modal" data-bs-target="#modalProducto1">Ver más</button>
+
+              </div>
+            </div>
+          </div>
+      
+          <!-- Producto 2 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card bg-black text-light border border-warning h-100">
+              <img src="images/remera2.png" class="card-img-top" alt="Remera Delorean">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Remera Delorean</h5>
+                <p class="card-text">Viaje al pasado con este diseño. Algodón premium.</p>
+                <button class="btn btn-warning btn-zoom" data-bs-toggle="modal" data-bs-target="#modalProducto2">Ver más</button>
+
+              </div>
+            </div>
+          </div>
+      
+          <!-- Producto 3 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card bg-black text-light border border-warning h-100">
+              <img src="images/remera3.PNG" class="card-img-top" alt="Remera Cassette">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Remera Cassette</h5>
+                <p class="card-text">Para los nostálgicos del Walkman. Old school vibes.</p>
+                <button class="btn btn-warning btn-zoom" data-bs-toggle="modal" data-bs-target="#modalProducto3">Ver más</button>
+
+              </div>
+            </div>
+          </div>
+      
+          <!-- Producto 4 -->
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card bg-black text-light border border-warning h-100">
+              <img src="images/remera4.png" class="card-img-top" alt="Remera VHS">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Remera VHS</h5>
+                <p class="card-text">Diseño retro inspirado en cintas de video. 100% rebeldía.</p>
+                <button class="btn btn-warning btn-zoom" data-bs-toggle="modal" data-bs-target="#modalProducto4">Ver más</button>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- MODALES DE LOS PRODUCTOS -->
+        <!-- Modal Producto 1 -->
+        <div class="modal fade" id="modalProducto1" tabindex="-1" aria-labelledby="modalProductoLabel1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalProductoLabel1">Remera Retro Gamer</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <img src="images/remera 1.png" alt="Remera Retro Gamer" class="img-fluid mb-3">
+                <ul>
+                  <li>Diseño exclusivo pixelado</li>
+                  <li>Talles: M, L, XL</li>
+                  <li>100% algodón orgánico</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Modal Producto 2 -->
+        <div class="modal fade" id="modalProducto2" tabindex="-1" aria-labelledby="modalProductoLabel2" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalProductoLabel2">Remera Delorean</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <img src="images/remera2.png" alt="Remera Delorean" class="img-fluid mb-3">
+                <ul>
+                  <li>Inspirada en Volver al Futuro</li>
+                  <li>Talles: M, L, XL</li>
+                  <li>Algodón de alta calidad</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Modal Producto 3 -->
+        <div class="modal fade" id="modalProducto3" tabindex="-1" aria-labelledby="modalProductoLabel3" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalProductoLabel3">Remera Cassette</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <img src="images/remera3.png" alt="Remera Cassette" class="img-fluid mb-3">
+                <ul>
+                  <li>Estilo retro 80s/90s</li>
+                  <li>Talles: S, M, L</li>
+                  <li>Tejido suave y cómodo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Modal Producto 4 -->
+        <div class="modal fade" id="modalProducto4" tabindex="-1" aria-labelledby="modalProductoLabel4" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalProductoLabel4">Remera VHS</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body">
+                <img src="images/remera4.png" alt="Remera VHS" class="img-fluid mb-3">
+                <ul>
+                  <li>Diseño con gráfica VHS</li>
+                  <li>Talles: M, L, XXL</li>
+                  <li>Estilo urbano vintage</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+  </main>
+  
+
+
+  <!-- Bootstrap JS (para el menú hamburguesa) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const sound8bit = new Audio("sounds/click-8bit.wav/clickcoin.wav");    
+  
+    document.querySelectorAll(".btn-sound").forEach(button => {
+      button.addEventListener("click", () => {
+        sound8bit.currentTime = 0; // Reinicia el audio si se hace clic rápido
+        sound8bit.play();
+      });
+    });
+  </script>
+
+<footer class="footer-retro mt-5">
+  <div class="container text-center py-4">
+    <img src="images/logo1.PNG" alt="Logo de Duck'n Roll Remeras" width="100" height="100" class="me-2">
+        <h2 class="footer-logo">Duck'n Roll Remeras</h2>
+        <p class="footer-tagline">"Estilo rebelde, sin manual de instrucciones"</p>
+
+    <div class="footer-social my-3">
+      <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <div class="footer-contact mb-3">
+      <p>Email: contacto@ducknroll.com</p>
+      <p>WhatsApp: +54 9 11 1234-5678</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Inicio</a> |
+      <a href="productos.html">Productos</a> |
+      <a href="nosotros.html">Nosotros</a> |
+      <a href="contacto.html">Contacto</a>
+    </div>
+
+    <div class="footer-copy mt-3">
+      <p>&copy; 2025 Duck'n Roll Remeras - Todos los derechos reservados</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

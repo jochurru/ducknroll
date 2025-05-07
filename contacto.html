@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Duck'n Roll Remeras</title>
+  <meta name="description" content="Duck'n Roll Remeras: estilo retro, gaming y más. Remeras personalizadas para espíritus rebeldes.">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Fuentes de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts Retro -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-dark text-light">
+
+  <!-- Header con Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-warning">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo1.PNG" alt="Logo de Duck'n Roll Remeras" width="100" height="100" class="me-2">
+        <div class="d-flex flex-column">
+          <span class="logo-title text-warning">Duck'n Roll</span>
+          <span class="logo-tagline text-warning d-none d-md-block">
+            "Estilo rebelde, sin manual de instrucciones"
+          </span>
+        </div>
+      </a>
+      
+      
+
+      <!-- Botón hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces del menú -->
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-light" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main><br>
+    <section class="form-container">
+      <h1 class="logo-title">Contacto</h1>
+      <form action="https://formspree.io/f/mnnpklkl" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="name" name="name" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" name="_replyto" required />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn-arcade btn-zoom">Enviar</button>
+      </form>
+    </section>
+  </main>
+ <!-- Bootstrap JS (para el menú hamburguesa) -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+   const sound8bit = new Audio("sounds/click-8bit.wav/clickcoin.wav");    
+ 
+   document.querySelectorAll(".btn-sound").forEach(button => {
+     button.addEventListener("click", () => {
+       sound8bit.currentTime = 1; // Reinicia el audio si se hace clic rápido
+       sound8bit.play();
+     });
+   });
+ </script>
+ 
+ <footer class="footer-retro mt-5">
+  <div class="container text-center py-4">
+    <img src="images/logo1.PNG" alt="Logo de Duck'n Roll Remeras" width="100" height="100" class="me-2">
+        <h2 class="footer-logo">Duck'n Roll Remeras</h2>
+        <p class="footer-tagline">"Estilo rebelde, sin manual de instrucciones"</p>
+    <div class="footer-social my-3">
+      <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <div class="footer-contact mb-3">
+      <p>Email: contacto@ducknroll.com</p>
+      <p>WhatsApp: +54 9 11 1234-5678</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Inicio</a> |
+      <a href="productos.html">Productos</a> |
+      <a href="nosotros.html">Nosotros</a> |
+      <a href="contacto.html">Contacto</a>
+    </div>
+
+    <div class="footer-copy mt-3">
+      <p>&copy; 2025 Duck'n Roll Remeras - Todos los derechos reservados</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
