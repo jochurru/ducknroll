@@ -1,5 +1,8 @@
 /* Estilos para el header */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Para que quede por encima de otras secciones */
   background-color: #1f1f1f;
   padding: 10px 20px;
   color: #ffcc00;
