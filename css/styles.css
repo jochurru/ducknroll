@@ -4,6 +4,16 @@ header {
   padding: 10px 20px;
   color: #ffcc00;
 }
+.duck-background {
+  background-image: url('images/back-image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #000; /* negro de fondo */
+  color: #fff; /* texto claro */
+  height: 100vh; /* asegura que cubra toda la altura de la pantalla */
+}
+
 
 /* Flex para logo y navegación juntos */
 .logo-nav {
