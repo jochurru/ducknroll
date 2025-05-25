@@ -11,7 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <!-- Google Fonts Retro -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome! -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Animated on Scroll libreria -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- CSS personalizado -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-dark text-light">
@@ -58,12 +62,12 @@
     </div>
   </nav>
   <main>
-    <section id="productos" class="productos container py-5">
-        <h2 class="text-warning logo-title mb-4 text-center">Nuestros Productos</h2>
+    <section id="productos" class="productos container py-5" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-warning logo-title mb-4 text-center" data-aos="fade-right" data-aos-duration="1000" >Nuestros Productos</h2>
       
         <div class="row g-4">
           <!-- Producto 1 -->
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
             <div class="card bg-black text-light border border-warning h-100">
               <img src="images/remera 1.png" class="card-img-top" alt="Remera Retro 1">
               <div class="card-body">
@@ -80,7 +84,7 @@
           </div>
       
           <!-- Producto 2 -->
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
             <div class="card bg-black text-light border border-warning h-100">
               <img src="images/remera2.png" class="card-img-top" alt="Remera Delorean">
               <div class="card-body">
@@ -97,7 +101,7 @@
           </div>
       
           <!-- Producto 3 -->
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
             <div class="card bg-black text-light border border-warning h-100">
               <img src="images/remera3.PNG" class="card-img-top" alt="Remera Cassette">
               <div class="card-body">
@@ -114,7 +118,7 @@
           </div>
       
           <!-- Producto 4 -->
-          <div class="col-12 col-sm-6 col-lg-3">
+          <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-duration="1000">
             <div class="card bg-black text-light border border-warning h-100">
               <img src="images/remera4.png" class="card-img-top" alt="Remera VHS">
               <div class="card-body">
@@ -231,7 +235,10 @@
       });
     });
   </script>
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 <footer class="footer-retro mt-5">
   <div class="container text-center py-4">
 
