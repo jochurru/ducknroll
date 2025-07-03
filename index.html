@@ -48,47 +48,79 @@
 
 <body class="bg-dark text-light duck-background">
 
-  <!-- Header con Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-warning">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="images/logo1.PNG" alt="Logo de Duck'n Roll Remeras" width="100" height="100" class="me-2">
-        <div class="d-flex flex-column">
-          <span class="logo-title text-warning">Duck'n Roll</span>
-          <span class="logo-tagline text-warning d-none d-md-block">
-            "Estilo rebelde, sin manual de instrucciones"
-          </span>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-warning">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/logo1.PNG" alt="Logo de Duck'n Roll Remeras" width="100" height="100" class="me-2">
+      <div class="d-flex flex-column">
+        <span class="logo-title text-warning">Duck'n Roll</span>
+        <span class="logo-tagline text-warning d-none d-md-block">
+          "Estilo rebelde, sin manual de instrucciones"
+        </span>   
+      </div>
+    </a>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Enlaces del menú -->
+    <div class="collapse navbar-collapse" id="menuNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="index.html">
+            <i class="fa-solid fa-house" style="font-size: 20px;"></i> Inicio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="productos.html">
+            <i class="fas fa-shirt" style="font-size: 20px;"></i> Productos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="nosotros.html">
+            <i class="fas fa-shirt" style="font-size: 20px;"></i> Nosotros
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="contacto.html">
+            <i class="fa-solid fa-inbox" style="font-size: 20px;"></i> Contacto
+          </a>
+        </li>
+        <!-- Ítem nuevo: Carrito -->
+        <li class="nav-item">
+          <a class="nav-link text-light position-relative" href="#" data-bs-toggle="modal" data-bs-target="#carritoModal">
+            <i class="fa-solid fa-cart-shopping" style="font-size: 20px;"></i> Carrito
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="contador-carrito">
+              0
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Modal Carrito -->
+<div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header">
+        <h5 class="modal-title text-warning" id="carritoLabel">🛒 Tu carrito</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul id="carrito-items" class="list-group list-group-flush text-light mb-3"></ul>
+        <p class="text-end fs-5">Total: $<span id="carrito-total">0</span></p>
+        <div class="text-end">
+          <button id="btn-checkout" class="btn-warning">Finalizar compra</button>
         </div>
-      </a>
-      
-      
-
-      <!-- Botón hamburguesa -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Enlaces del menú -->
-      <div class="collapse navbar-collapse" id="menuNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link text-light" href="index.html"><i class="fa-solid fa-house" style="font-size: 20px;"></i> Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="productos.html"><i class="fas fa-shirt" style="font-size: 20px;"></i> Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="nosotros.html"><i class="fas fa-shirt" style="font-size: 20px;"></i> Nosotros</a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="contacto.html"><i class="fa-solid fa-inbox" style="font-size: 20px;"></i> Contacto</a>
-          </li>
-        </ul>
       </div>
     </div>
-  </nav>
+  </div>
+</div>
+
   <main>
   <div class="container my-4">
   <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
