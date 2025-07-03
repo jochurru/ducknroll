@@ -176,5 +176,17 @@
   </footer>
   <!-- Script personalizado -->
   <script src="./js/script.js"></script>
+
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const resumen = localStorage.getItem("carrito_resumen");
+    const input = document.getElementById("carrito_resumen");
+    if (input && resumen) {
+      input.value = resumen;
+    }
+  });
+</script>
+
 </body>
 </html>

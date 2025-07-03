@@ -79,9 +79,14 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    alert("Gracias por tu compra. Pronto nos pondremos en contacto.");
-    carrito = [];
-    actualizarCarrito();
+    alert("Completa el formulario para terminar con la compra y en breve nos estaremos comunicando con vos");
+
+    // Guardar el resumen en localStorage
+    const resumen = generarResumenCarrito();
+    localStorage.setItem("carrito_resumen", resumen);
+
+    // Redirigir a la página de contacto
+    window.location.href = "contacto.html";
   }
 
   // Genera un resumen del carrito en texto plano para enviar por formulario
@@ -138,4 +143,3 @@ document.addEventListener('DOMContentLoaded', () => {
   actualizarCarrito();
 
 });
-// Fin del script de carrito.js         
