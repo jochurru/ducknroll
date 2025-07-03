@@ -115,6 +115,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnCheckout) {
     btnCheckout.addEventListener("click", checkout);
   }
+// Vaciar el carrito
+const btnVaciar = document.getElementById("btn-vaciar-carrito");
+if (btnVaciar) {
+  btnVaciar.addEventListener("click", () => {
+    if (confirm("¿Estás seguro de que querés vaciar el carrito?")) {
+      carrito = [];
+      actualizarCarrito();
+    }
+  });
+}
 
   // Evento para el botón de cerrar el modal del carrito
   const btnCloseModal = document.getElementById("btn-close-modal");
