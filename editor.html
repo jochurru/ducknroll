@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generador de Remeras - Duck'n Roll</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-dark text-light">
+  <div class="container py-5">
+    <h1 class="text-warning text-center mb-4">🎛️ Editor de Remeras</h1>
+
+    <form id="form-remera" class="mb-4">
+      <div class="mb-3">
+        <label class="form-label">Nombre de la Remera</label>
+        <input type="text" class="form-control" id="nombre" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Precio</label>
+        <input type="number" class="form-control" id="precio" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Ruta de Imagen (ej: images/remera8.png)</label>
+        <input type="text" class="form-control" id="imagen" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Descripción (una por línea)</label>
+        <textarea class="form-control" id="descripcion" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-warning">🧵 Generar JSON</button>
+    </form>
+
+    <h3 class="text-success mb-2">🧬 Resultado:</h3>
+    <pre id="jsonResultado" class="bg-black p-3 rounded border border-success text-success"></pre>
+    <h3 class="text-info mb-3">👕 Remeras cargadas</h3>
+<div class="table-responsive">
+  <table class="table table-dark table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Imagen</th>
+        <th>Editar</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-remeras"></tbody>
+  </table>
+</div>
+  </div>
+<script src="./js/script.js"></script>
+<script>
+  const API_URL = "https://sheetdb.io/api/v1/xq4b11ihpz688";
+  let editorID = null; // se usa para saber si es edición o creación
+
+  document.getElementById("form-remera").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const id = editorID || Date.now();
+    const nombre = document.getElementById("nombre").value.trim();
+    const precio = parseFloat(document.getElementById("precio").value);
+    const imagen = document.getElementById("imagen").value.trim();
+    const descripcion = document.getElementById("descripcion").value
+      .trim()
+      .split("\n")
+      .filter(linea => linea.trim())
+      .join(" | ");
+
+    const nuevaRemera = { id, nombre, precio, imagen, descripcion };
+    const metodo = editorID ? "PATCH" : "POST";
+    const url = editorID ? `${API_URL}/id/${id}` : API_URL;
+
+    fetch(url, {
+      method: metodo,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ data: nuevaRemera })
+    })
+      .then(res => res.json())
+      .then(() => {
+        document.getElementById("jsonResultado").textContent =
+          editorID
+            ? "📝 Remera actualizada correctamente"
+            : "✅ Remera enviada exitosamente a la hoja de cálculo";
+        document.getElementById("form-remera").reset();
+        editorID = null;
+        cargarRemerasTabla();
+      })
+      .catch(err => {
+        document.getElementById("jsonResultado").textContent =
+          "❌ Error al guardar la remera: " + err;
+      });
+  });
+
+  function cargarRemerasTabla() {
+    fetch(API_URL)
+      .then(res => res.json())
+      .then(data => {
+        const tabla = document.getElementById("tabla-remeras");
+        tabla.innerHTML = "";
+
+        data.forEach(rem => {
+          const fila = document.createElement("tr");
+          fila.innerHTML = `
+            <td>${rem.id}</td>
+            <td>${rem.nombre}</td>
+            <td>$${rem.precio}</td>
+            <td><img src="${rem.imagen}" alt="${rem.nombre}" width="60"></td>
+            <td>
+            <button class="btn btn-sm btn-outline-info me-2" onclick="editarDesdeTabla('${rem.id}')">Editar</button>
+            <button class="btn btn-sm btn-outline-danger" onclick="eliminarRemera('${rem.id}')">Eliminar</button>
+            </td>
+          `;
+          tabla.appendChild(fila);
+        });
+      });
+  }
+
+  function editarDesdeTabla(id) {
+    fetch(`${API_URL}/search?id=${id}`)
+      .then(res => res.json())
+      .then(([rem]) => {
+        if (!rem) return alert("Remera no encontrada.");
+        editorID = rem.id;
+        document.getElementById("nombre").value = rem.nombre;
+        document.getElementById("precio").value = rem.precio;
+        document.getElementById("imagen").value = rem.imagen;
+        document.getElementById("descripcion").value = rem.descripcion
+          .split("|")
+          .map(d => d.trim())
+          .join("\n");
+
+        document.getElementById("jsonResultado").textContent = `📝 Editando remera ID: ${rem.id}`;
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+  }
+
+  cargarRemerasTabla();
+</script>
+</body>
+</html>

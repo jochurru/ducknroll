@@ -1,0 +1,79 @@
+[
+{
+    "id": 1,
+    "nombre": "Remera Volver al Futuro",
+    "precio": 8990,
+    "imagen": "images/remera 1.png",
+    "descripcion": [
+    "Diseño exclusivo pixelado",
+    "Talles: M, L, XL",
+    "100% algodón orgánico"
+    ]
+},
+{
+    "id": 2,
+    "nombre": "Remera Delorean",
+    "precio": 9200,
+    "imagen": "images/remera2.png",
+    "descripcion": [
+    "Inspirada en Volver al Futuro",
+    "Talles: M, L, XL",
+    "Algodón de alta calidad"
+    ]
+},
+{
+    "id": 3,
+    "nombre": "Remera Cassette",
+    "precio": 8700,
+    "imagen": "images/remera3.PNG",
+    "descripcion": [
+    "Estilo retro 80s/90s",
+    "Talles: S, M, L",
+    "Tejido suave y cómodo"
+    ]
+},
+{
+    "id": 4,
+    "nombre": "Remera VHS",
+    "precio": 9500,
+    "imagen": "images/remera4.png",
+    "descripcion": [
+    "Diseño con gráfica VHS",
+    "Talles: M, L, XXL",
+    "Estilo urbano vintage"
+    ]
+}
+,{
+"id": 5,
+"nombre": "Remera Anime Tanjiro",
+"precio": 8800,
+"imagen": "images/remera5.png",
+"descripcion": [
+    "Inspirada en Demon Slayer",
+    "Talles: M, L, XL",
+    "Estilo japonés moderno"
+]
+}
+,{
+"id": 6,
+"nombre": "Remera joystick PlayStation",
+"precio": 9100,
+"imagen": "images/remera6.png",
+"descripcion": [
+    "Diseño gamer exclusivo",
+    "Talles: M, L, XL",
+    "100% algodón orgánico"
+]
+}
+,{
+"id": 7,
+"nombre": "Remera space invaders",
+"precio": 9400,
+"imagen": "images/remera7.png",
+"descripcion": [
+    "Inspirada en el clásico arcade",
+    "Talles: M, L, XL",
+    "Tejido suave y cómodo"
+]
+}
+]

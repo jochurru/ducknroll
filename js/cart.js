@@ -98,17 +98,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join("\n");
   }
 
-  // Agregar eventos a los botones "Agregar al carrito"
-  document.querySelectorAll(".btn-add-cart").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const id = btn.dataset.id;
-      const nombre = btn.dataset.nombre;
-      const precio = parseFloat(btn.dataset.precio);
-      const imagen = btn.dataset.imagen;
+// Escuchar clicks en cualquier lugar del body
+document.body.addEventListener("click", function (event) {
+  const btn = event.target.closest(".btn-add-cart");
+  if (btn) {
+    const id = btn.dataset.id;
+    const nombre = btn.dataset.nombre;
+    const precio = parseFloat(btn.dataset.precio);
+    const imagen = btn.dataset.imagen;
 
-      agregarAlCarrito(id, nombre, precio, imagen);
-    });
-  });
+    agregarAlCarrito(id, nombre, precio, imagen);
+  }
+});
 
   // Evento para el botón de finalizar compra
   const btnCheckout = document.getElementById("btn-checkout");
@@ -153,3 +154,4 @@ if (btnVaciar) {
   actualizarCarrito();
 
 });
+
