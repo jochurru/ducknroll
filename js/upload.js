@@ -10,6 +10,16 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const storage = firebase.storage();
+const auth = firebase.auth();
+
+// Iniciar sesión anónima
+auth.signInAnonymously()
+  .then(() => {
+    console.log("✅ Usuario anónimo autenticado.");
+  })
+  .catch((error) => {
+    console.error("❌ Error al autenticar:", error.message);
+  });
 
 function subirImagen() {
   const archivo = document.getElementById("fileInput").files[0];
